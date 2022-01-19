@@ -112,8 +112,9 @@ export default {
   font-size: 125px;
   color: #fff;
   padding: 10px;
-  box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.3);
-  border-radius: 17px;
+  box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 100% 0% 100% 0% / 100% 100% 100% 100% ;
+  background-color: rgba(0, 0, 0, 0.048);
   margin-top: 20px;
   height: 170px;
 }
