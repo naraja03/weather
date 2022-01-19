@@ -11,6 +11,7 @@ export default {};
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 .main {
   height: 100vh;
   width: 100vw;
@@ -31,18 +32,18 @@ export default {};
   border: none;
   background: #fff;
   color: #525865;
-  /* border-radius: 4px;
-  border: 1px solid #d1d1d1; */
-  box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.2);
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
-input:hover {
-  box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+.navigation input:hover {
+  color: #525865;
+  box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.3);
 }
-input:focus {
-  color: #4b515d;
-  border: 1px solid #b8b6b6;
-  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01),
-    0px 0px 8px rgba(0, 0, 0, 0.2);
+.navigation input:active {
+  color: #525865;
+  box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.2);
 }
 </style>
