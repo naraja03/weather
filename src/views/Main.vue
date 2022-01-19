@@ -6,6 +6,7 @@
         class="search"
         placeholder="City Name..."
         v-model="city"
+        autofocus
       />
     </div>
     <div class="content">
@@ -55,7 +56,7 @@ export default {
 .main {
   height: 100vh;
   width: 100vw;
-  background-image: url("../assets/common.jpg");
+  background-image: url("../assets/cool.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
