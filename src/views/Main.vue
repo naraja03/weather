@@ -1,17 +1,57 @@
 <template>
   <div class="main">
     <div class="navigation">
-      <input type="text" class="search" placeholder="City Name..." />
+      <input
+        type="text"
+        class="search"
+        placeholder="City Name..."
+        v-model="city"
+      />
+    </div>
+    <div class="content">
+      <h1 class="city">{{ city }}</h1>
+      <h6 class="date">{{ day }} , {{ month }} {{ date }}, {{ year }}</h6>
+      <h1 class="temperature">{{ temp }}°C</h1>
+    </div>
+    <div class="footer">
+      <h1 class="weather">{{weather}}</h1>
+      <h2 class="temperatures">{{minTemp}}/{{maxTemp}}</h2>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { ref } from "vue";
+export default {
+  setup() {
+    const city = ref("Panagudi");
+    const day = ref("Sunday");
+    const month = ref("January");
+    const date = ref(22);
+    const year = ref(2022);
+    const temp = ref(22);
+    const minTemp = ref(18);
+    const maxTemp = ref(25);
+    const weather = ref("Cloudy");
+
+    return {
+      city,
+      day,
+      month,
+      date,
+      year,
+      temp,
+      minTemp,
+      maxTemp,
+      weather,
+    };
+  },
+};
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .main {
   height: 100vh;
   width: 100vw;
@@ -21,7 +61,7 @@ export default {};
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  padding: 10%;
+  padding: 5% 10%;
   align-items: center;
 }
 
@@ -45,5 +85,44 @@ export default {};
 .navigation input:active {
   color: #525865;
   box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.2);
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.city {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 75px;
+  color: #fff;
+}
+.date {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.temperature {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 125px;
+  color: #fff;
+  padding: 10px;
+  box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 17px;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .weather{
+    font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 20px;
 }
 </style>
