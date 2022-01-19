@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="navigation">
-      <input type="text" class="search" placeholder="City Name...">
+      <input type="text" class="search" placeholder="City Name..." />
     </div>
   </div>
 </template>
@@ -24,7 +24,25 @@ export default {};
   align-items: center;
 }
 
-input .search{
-  padding: 10px;
+.navigation input {
+  padding: 15px 50px;
+  border-radius: 20px 20px 20px 40px;
+  outline: none;
+  border: none;
+  background: #fff;
+  color: #525865;
+  /* border-radius: 4px;
+  border: 1px solid #d1d1d1; */
+  box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+input:hover {
+  box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+}
+input:focus {
+  color: #4b515d;
+  border: 1px solid #b8b6b6;
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01),
+    0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 </style>
