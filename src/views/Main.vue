@@ -14,8 +14,8 @@
       <h1 class="temperature">{{ temp }}°C</h1>
     </div>
     <div class="footer">
-      <h1 class="weather">{{weather}}</h1>
-      <h2 class="temperatures">{{minTemp}}/{{maxTemp}}</h2>
+      <h1 class="weather">{{ weather }}</h1>
+      <h2 class="temperatures">{{ minTemp }}°c/{{ maxTemp }}°c</h2>
     </div>
   </div>
 </template>
@@ -97,11 +97,13 @@ export default {
   text-transform: uppercase;
   font-size: 75px;
   color: #fff;
+  height: 120px;
 }
 .date {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.5);
+  height: 25px;
 }
 .temperature {
   font-family: sans-serif;
@@ -111,17 +113,27 @@ export default {
   padding: 10px;
   box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.3);
   border-radius: 17px;
+  margin-top: 20px;
+  height: 170px;
 }
-.footer{
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 30px;
+  height: 170px;
 }
-.footer .weather{
-    font-family: "Poppins", sans-serif;
+.footer .weather {
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
+  color: #fff;
+  margin-top: 20px;
+}
+.temperatures {
+  font-family: sans-serif;
+  font-size: 30px;
   color: #fff;
   margin-top: 20px;
 }
